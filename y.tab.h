@@ -58,7 +58,7 @@ extern int yydebug;
 
 union YYSTYPE
 {
-#line 17 "lancopy.y" /* yacc.c:1909  */
+#line 17 "lan.y" /* yacc.c:1909  */
 
  int iValue; 
  char *stringValue;

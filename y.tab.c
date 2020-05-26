@@ -62,7 +62,7 @@
 
 
 /* Copy the first part of user declarations.  */
-#line 1 "lancopy.y" /* yacc.c:339  */
+#line 1 "lan.y" /* yacc.c:339  */
     
 #include <stdio.h>
 #include <string.h>
@@ -127,7 +127,7 @@ extern int yydebug;
 
 union YYSTYPE
 {
-#line 17 "lancopy.y" /* yacc.c:355  */
+#line 17 "lan.y" /* yacc.c:355  */
 
  int iValue; 
  char *stringValue;
@@ -391,7 +391,7 @@ union yyalloc
 /* YYFINAL -- State number of the termination state.  */
 #define YYFINAL  27
 /* YYLAST -- Last index in YYTABLE.  */
-#define YYLAST   42
+#define YYLAST   49
 
 /* YYNTOKENS -- Number of terminals.  */
 #define YYNTOKENS  15
@@ -475,10 +475,10 @@ static const yytype_uint16 yytoknum[] =
 };
 # endif
 
-#define YYPACT_NINF -12
+#define YYPACT_NINF -14
 
 #define yypact_value_is_default(Yystate) \
-  (!!((Yystate) == (-12)))
+  (!!((Yystate) == (-14)))
 
 #define YYTABLE_NINF -1
 
@@ -489,11 +489,11 @@ static const yytype_uint16 yytoknum[] =
      STATE-NUM.  */
 static const yytype_int8 yypact[] =
 {
-       4,     0,    12,   -12,    22,    23,   -12,    24,    25,     7,
-      26,     4,     4,    11,    11,     4,     4,     4,    -5,    -5,
-       4,    27,    28,    20,    19,    29,   -12,   -12,   -12,   -12,
-     -12,   -12,   -12,   -12,   -12,   -12,   -12,   -12,   -12,   -12,
-     -12,   -12,   -12,   -12
+      18,     2,    11,   -14,    19,    30,   -14,    31,    33,     6,
+       3,   -14,    -6,   -14,   -14,   -14,   -14,    22,   -14,   -14,
+     -14,    14,    32,    28,    27,    29,   -14,   -14,   -14,   -14,
+      -6,   -14,   -14,    22,   -14,   -14,   -14,   -14,   -14,   -14,
+     -14,   -14,   -14,   -14
 };
 
   /* YYDEFACT[STATE-NUM] -- Default reduction number in state STATE-NUM.
@@ -504,15 +504,15 @@ static const yytype_uint8 yydefact[] =
       16,     0,     0,    21,     0,     0,    27,     0,     0,     0,
        0,     3,     4,    17,    18,     7,     8,     6,    29,    30,
        5,     0,     0,     0,     0,     0,    37,     1,     2,     9,
-      10,    19,    20,    13,    14,    12,    31,    32,    11,    15,
+      10,    13,    14,    12,    11,    19,    20,    31,    32,    15,
       33,    23,    25,    35
 };
 
   /* YYPGOTO[NTERM-NUM].  */
 static const yytype_int8 yypgoto[] =
 {
-     -12,   -12,   -11,   -12,     8,   -12,   -12,   -12,   -12,     5,
-     -12,   -12,   -12
+     -14,   -14,   -14,    34,    35,   -12,   -11,    36,    37,    38,
+     -13,   -10,    39
 };
 
   /* YYDEFGOTO[NTERM-NUM].  */
@@ -527,20 +527,20 @@ static const yytype_int8 yydefgoto[] =
      number is the opposite.  If YYTABLE_NINF, syntax error.  */
 static const yytype_uint8 yytable[] =
 {
-      29,    30,     2,    21,    33,    34,    35,    27,     7,    38,
-       1,     2,     3,     4,     5,    22,     6,     7,     8,     3,
-       4,    31,    32,    36,    37,    23,    24,    25,    26,    41,
-      42,    28,     0,     0,    39,    40,     0,     0,     0,     0,
-       0,     0,    43
+      35,    36,     3,     4,    37,    21,    27,    38,    28,     1,
+       2,     3,     4,     5,    22,     6,     7,     8,    35,    36,
+      37,    39,    23,    38,     1,     2,     3,     4,     5,     2,
+       6,     7,     8,    24,    25,     7,    26,    41,    42,    40,
+       0,     0,    43,     0,    29,    30,    31,    32,    33,    34
 };
 
 static const yytype_int8 yycheck[] =
 {
-      11,    12,     7,     3,    15,    16,    17,     0,    13,    20,
-       6,     7,     8,     9,    10,     3,    12,    13,    14,     8,
-       9,    13,    14,    18,    19,     3,     3,     3,     3,     9,
-      11,     5,    -1,    -1,     7,     7,    -1,    -1,    -1,    -1,
-      -1,    -1,    13
+      12,    12,     8,     9,    17,     3,     0,    17,     5,     6,
+       7,     8,     9,    10,     3,    12,    13,    14,    30,    30,
+      33,     7,     3,    33,     6,     7,     8,     9,    10,     7,
+      12,    13,    14,     3,     3,    13,     3,     9,    11,     7,
+      -1,    -1,    13,    -1,    10,    10,    10,    10,    10,    10
 };
 
   /* YYSTOS[STATE-NUM] -- The (internal number of the) accessing
@@ -549,8 +549,8 @@ static const yytype_uint8 yystos[] =
 {
        0,     6,     7,     8,     9,    10,    12,    13,    14,    16,
       17,    18,    19,    20,    21,    22,    23,    24,    25,    26,
-      27,     3,     3,     3,     3,     3,     3,     0,     5,    17,
-      17,    19,    19,    17,    17,    17,    24,    24,    17,     7,
+      27,     3,     3,     3,     3,     3,     3,     0,     5,    18,
+      19,    22,    23,    24,    27,    20,    21,    25,    26,     7,
        7,     9,    11,    13
 };
 
@@ -1246,55 +1246,55 @@ yyreduce:
   switch (yyn)
     {
         case 2:
-#line 27 "lancopy.y" /* yacc.c:1646  */
+#line 27 "lan.y" /* yacc.c:1646  */
     {system("ls");}
 #line 1252 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 15:
-#line 47 "lancopy.y" /* yacc.c:1646  */
+#line 47 "lan.y" /* yacc.c:1646  */
     {   (yyval.stringValue)=labeltag((yyvsp[-1].stringValue)); htmlfile((yyval.stringValue));  printf("%s",(yyval.stringValue));   freespace((yyval.stringValue));}
 #line 1258 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 21:
-#line 57 "lancopy.y" /* yacc.c:1646  */
+#line 57 "lan.y" /* yacc.c:1646  */
     { htmlfile("<input type=\"text\">"); printf("<input type=\"text\">");}
 #line 1264 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 23:
-#line 61 "lancopy.y" /* yacc.c:1646  */
+#line 61 "lan.y" /* yacc.c:1646  */
     {  (yyval.stringValue)=placeholderinputtag((yyvsp[-1].stringValue)); htmlfile((yyval.stringValue));  printf("%s",(yyval.stringValue));  freespace((yyval.stringValue)); }
 #line 1270 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 25:
-#line 65 "lancopy.y" /* yacc.c:1646  */
+#line 65 "lan.y" /* yacc.c:1646  */
     { (yyval.stringValue)=checkboxtag((yyvsp[-1].stringValue)); htmlfile((yyval.stringValue));  printf("%s",(yyval.stringValue)); }
 #line 1276 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 27:
-#line 69 "lancopy.y" /* yacc.c:1646  */
+#line 69 "lan.y" /* yacc.c:1646  */
     { htmlfile("<br>"); printf("<br>");}
 #line 1282 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 33:
-#line 80 "lancopy.y" /* yacc.c:1646  */
+#line 80 "lan.y" /* yacc.c:1646  */
     { (yyval.stringValue)=boldtag((yyvsp[-1].stringValue)); htmlfile((yyval.stringValue));  printf("%s",(yyval.stringValue)); }
 #line 1288 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 35:
-#line 84 "lancopy.y" /* yacc.c:1646  */
+#line 84 "lan.y" /* yacc.c:1646  */
     { (yyval.stringValue)=italictag((yyvsp[-1].stringValue)); htmlfile((yyval.stringValue));  printf("%s",(yyval.stringValue)); }
 #line 1294 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 37:
-#line 88 "lancopy.y" /* yacc.c:1646  */
+#line 88 "lan.y" /* yacc.c:1646  */
     { (yyval.stringValue)=listtag((yyvsp[0].stringValue)); htmlfile((yyval.stringValue));  printf("%s",(yyval.stringValue)); }
 #line 1300 "y.tab.c" /* yacc.c:1646  */
     break;
@@ -1528,7 +1528,7 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 94 "lancopy.y" /* yacc.c:1906  */
+#line 94 "lan.y" /* yacc.c:1906  */
 
 void htmlfile(char *str)
 {
