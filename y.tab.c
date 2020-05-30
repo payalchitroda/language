@@ -62,7 +62,7 @@
 
 
 /* Copy the first part of user declarations.  */
-#line 1 "lan.y" /* yacc.c:339  */
+#line 1 "language.y" /* yacc.c:339  */
     
 #include <stdio.h>
 #include <string.h>
@@ -127,7 +127,7 @@ extern int yydebug;
 
 union YYSTYPE
 {
-#line 17 "lan.y" /* yacc.c:355  */
+#line 17 "language.y" /* yacc.c:355  */
 
  int iValue; 
  char *stringValue;
@@ -1246,55 +1246,55 @@ yyreduce:
   switch (yyn)
     {
         case 2:
-#line 27 "lan.y" /* yacc.c:1646  */
-    {system("ls");}
+#line 27 "language.y" /* yacc.c:1646  */
+    {system("xdg-open intermediate.html");}
 #line 1252 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 15:
-#line 47 "lan.y" /* yacc.c:1646  */
+#line 47 "language.y" /* yacc.c:1646  */
     {   (yyval.stringValue)=labeltag((yyvsp[-1].stringValue)); htmlfile((yyval.stringValue));  printf("%s",(yyval.stringValue));   freespace((yyval.stringValue));}
 #line 1258 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 21:
-#line 57 "lan.y" /* yacc.c:1646  */
+#line 57 "language.y" /* yacc.c:1646  */
     { htmlfile("<input type=\"text\">"); printf("<input type=\"text\">");}
 #line 1264 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 23:
-#line 61 "lan.y" /* yacc.c:1646  */
+#line 61 "language.y" /* yacc.c:1646  */
     {  (yyval.stringValue)=placeholderinputtag((yyvsp[-1].stringValue)); htmlfile((yyval.stringValue));  printf("%s",(yyval.stringValue));  freespace((yyval.stringValue)); }
 #line 1270 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 25:
-#line 65 "lan.y" /* yacc.c:1646  */
+#line 65 "language.y" /* yacc.c:1646  */
     { (yyval.stringValue)=checkboxtag((yyvsp[-1].stringValue)); htmlfile((yyval.stringValue));  printf("%s",(yyval.stringValue)); }
 #line 1276 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 27:
-#line 69 "lan.y" /* yacc.c:1646  */
+#line 69 "language.y" /* yacc.c:1646  */
     { htmlfile("<br>"); printf("<br>");}
 #line 1282 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 33:
-#line 80 "lan.y" /* yacc.c:1646  */
+#line 80 "language.y" /* yacc.c:1646  */
     { (yyval.stringValue)=boldtag((yyvsp[-1].stringValue)); htmlfile((yyval.stringValue));  printf("%s",(yyval.stringValue)); }
 #line 1288 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 35:
-#line 84 "lan.y" /* yacc.c:1646  */
+#line 84 "language.y" /* yacc.c:1646  */
     { (yyval.stringValue)=italictag((yyvsp[-1].stringValue)); htmlfile((yyval.stringValue));  printf("%s",(yyval.stringValue)); }
 #line 1294 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 37:
-#line 88 "lan.y" /* yacc.c:1646  */
+#line 88 "language.y" /* yacc.c:1646  */
     { (yyval.stringValue)=listtag((yyvsp[0].stringValue)); htmlfile((yyval.stringValue));  printf("%s",(yyval.stringValue)); }
 #line 1300 "y.tab.c" /* yacc.c:1646  */
     break;
@@ -1528,7 +1528,7 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 94 "lan.y" /* yacc.c:1906  */
+#line 94 "language.y" /* yacc.c:1906  */
 
 void htmlfile(char *str)
 {

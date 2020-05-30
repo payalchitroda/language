@@ -24,7 +24,7 @@ void yyerror(char *);
 %%
 
 start:
-    field '!'   {system("ls");}
+    field '!'   {system("xdg-open intermediate.html");}
 
 field:       
     label                  
@@ -33,12 +33,12 @@ field:
     |styletext
     |checkbox
     |row
-    |label field                 
-    |input field
-    |bullet field
-    |styletext field
-    |checkbox field
-    |row field
+    |field label                
+    |field input
+    |field bullet
+    |field styletext
+    |field checkbox
+    |field row
     ;
 
     ;
@@ -50,8 +50,8 @@ label:
 input: 
     simpleinput
     |placeholderinput       
-	|simpleinput input                         
-	|placeholderinput input                     
+	|input simpleinput                         
+	|input placeholderinput                     
 	; 
 simpleinput: 
     '.....'                  { htmlfile("<input type=\"text\">"); printf("<input type=\"text\">");}                            
@@ -73,8 +73,8 @@ row:
 styletext:        
     boldtext                                     
 	|italictext
-    |boldtext styletext                                    
-	|italictext styletext
+    |styletext boldtext                                   
+	|styletext italictext
     ;  
 boldtext:        
 	'*' TEXT '*'                  { $<stringValue>$=boldtag($<stringValue>2); htmlfile($<stringValue>$);  printf("%s",$<stringValue>$); } 
