@@ -9,7 +9,7 @@
 <br/>
 <br/>
 Sample form<br/>
-<img src="Images/input.png"/>
+<img src="Images/input.PNG"/>
 <img src="Images/output.png"/>
 
 
