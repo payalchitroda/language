@@ -8,5 +8,9 @@
 6.Generated html code gets stored in html file.
 <br/>
 <br/>
+Sample form<br/>
+<img src="Images/input.png"/>
+<img src="Images/output.png"/>
+
 
 
